@@ -1,0 +1,126 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Slab|Loved+by+the+King|Pacifico|Sue+Ellen+Francisco" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main_page.css">
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/cufon-yui.js" type="text/javascript"></script>
+  <script src="js/BabelSans_500.font.js" type="text/javascript"></script>
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+</head>
+
+<body>
+  <img src="images/bg2.jpg" id="Background-image" class="bg">
+
+  <ul id="Menu" class="Menu">
+  	<li><a href="#" id="Home">Home</a></li>
+  	<!-- <li><a href="#">About</a></li> -->
+    <li><a href="#" id="About">About Me</a><li>
+  	<li><a href="pdf/Resume.pdf">Resume</a></li>
+  	<li><a href="#" id="Work">Work</a></li>
+    <li><a href="#" id="Projects">Projects</a></li>
+    <li><a href="#" id="Photography">Photography</a></li>
+    <li><a href="#" id="Contact">Contact</a></li>
+  </ul>
+
+  <ul id="SocialMenu" class="SocialMenu">
+    <li><a href="http://www.facebook.com/jiangemory" target="_blank"><img  src="images/FB.png" id="FB"></a></li>
+    <li><a href="https://www.linkedin.com/in/emoryjiang" target="_blank"><img  src="images/LN.png" id="LN"></a></li>
+    <li><a href="https://github.com/emoryjiang" target="_blank"><img  src="images/GH2.png" id="GH" width=59 height=59></a></li>
+  </ul>
+
+
+  <div id="Contact-Box" class="Contact-Box">
+    <p class="Contact-Header">Hey! Let's chat!</p>
+    <img src="images/GM2.png" id="Gmail-Logo" class="Gmail-Logo">
+    <p class="email-address">jiangemory@gmail.com</p>
+    <img src="images/phone_logo.png" id="Phone-Logo" class="Phone-Logo" width=128 height=128>
+    <p class="phone-number">(925) - 683 - 5685</p>
+    <p class="direct-message">Or...Shoot me a direct message by clicking the icon below!</p>
+  </div>
+
+
+  <div id="About-Box" class="About-Box">
+    <p>
+      Hello, my name is Emory Jiang and I'm a third year Computer Science major at University of California, Irvine. I'm currently looking for Software Development internship opportunities for the summer. I am available for full time from mid-June to mid-September.
+
+      <br><br>Through my university studies, I have acquired proficiency in common programming languages such as C/C++, Java and Python. Last year I joined a team of three engineers and an artist to participate in the third annual Autism AppJam competition. I served as a programmer, game developer, and public relations manager for the team. In the span two weeks I worked with my teammates to develop a web application game. I came up with many of the level concepts as well as developed and programmed one of the game levels myself. In addition, I had to learn Javascript, CSS, and HTML from scratch as I had no prior experience with those languages. At the same time, I posted on our team's Facebook page with team updates, game updates, and teammate biographies for the public audience. Working on this project with my teammates was a rewarding experience and it taught me how to work efficiently in a team-oriented environment.
+
+      <br><br>I was a mentor for the IgniteCS mentorship program. This program introduced female high school students to coding. Our program aimed to shatter the social stigma that surrounded woman in computer science. With a grant from Google, we led eight workshops at La Quinta High School in Westminster, California that taught students how to program with Scatch and Makey-Makey as well as more difficult languages like Processing. My personal job was to lead the workshops on Processing. This included producing helpful handouts as well as providing lectures for the students.
+
+      <br><br>Currently I am interning for a new start-up called TutorSpace that aims to revolutionize the way we do online tutoring. My work includes creating views with html, and writing Javascript files.
+
+    </p>
+  </div>
+
+
+  <button id="open-popup">Open popup</button>
+
+
+  <script>
+    function revert() {
+      $('#About-Box').animate({"left": "-900px"}, "slow");
+      $('#Contact-Box').animate({"left": "-900px"}, "slow");
+      $('#open-popup').hide();
+    }
+
+    $('#About').click(function(){
+      console.log("hello");
+      revert();
+      $('#About-Box').animate({"left": "100px"}, "slow");
+      $('#Background-image').attr("src", "images/bg6.jpg");
+    });
+
+    $('#Work').click(function(){
+      revert();
+      $('#Background-image').attr("src", "images/bg4.jpg");
+    });
+
+    $('#Contact').click(function(){
+      revert();
+      $('#Contact-Box').animate({"left": "100px"}, "slow");
+      $('#Background-image').attr("src", "images/bg3.jpg");
+    });
+
+    $('#Home').click(function(){
+      revert();
+      $('#Background-image').attr("src", "images/bg2.jpg");
+    });
+
+    $('#Photography').click(function(){
+      revert();
+      $('#Background-image').attr("src", "images/bg5.jpg");
+      $('#open-popup').show();
+      $('#open-popup').magnificPopup({
+          items:[{
+            src: 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_%26_Paul_fortress_in_SPB_03.jpg/800px-Peter_%26_Paul_fortress_in_SPB_03.jpg',
+              title: 'Peter & Paul fortress in SPB'
+          },
+          {
+            src: 'images/random_image.jpg'
+          },
+          {
+            src: 'images/bg5.jpg'
+          }],
+          gallery: {
+            enabled: true
+          },
+          type: 'image' // this is default type
+      });
+
+    });
+
+    $('#Projects').click(function(){
+      revert();
+      $('#Background-image').attr("src", "images/bg7.jpg");
+    });
+  </script>
+
+  <!-- javascript files -->
+
+
+
+</body>
